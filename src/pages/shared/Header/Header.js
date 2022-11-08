@@ -8,7 +8,13 @@ import logo from "../../../assets/logo.jpg";
 
 const Header = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+    <Navbar
+      className="mb-2"
+      collapseOnSelect
+      expand="lg"
+      bg="light"
+      variant="light"
+    >
       <Container>
         <img src={logo} width="40" height="40" />
 
