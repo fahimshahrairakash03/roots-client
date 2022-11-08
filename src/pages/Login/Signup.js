@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
 import login from "../../assets/login.jpg";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/AuthProvider";
 
 const Signup = () => {
+  const { signup, user } = useContext(AuthContext);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+    signup(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        form.reset();
+      })
+      .then((error) => console.log(error));
+  };
+
   return (
     <div className="row  container mb-5 px-5 ">
       <div className="col-lg-6 col-sm-12 mx-auto">
@@ -12,7 +30,7 @@ const Signup = () => {
       </div>
       <div className="col-lg-6 col-sm-12 my-auto mx-auto ">
         <h1>Please Signup</h1>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control type="email" name="email" placeholder="Enter email" />
