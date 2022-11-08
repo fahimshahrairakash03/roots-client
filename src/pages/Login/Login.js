@@ -7,9 +7,11 @@ import { AuthContext } from "../../context/AuthProvider";
 import { GoogleAuthProvider } from "firebase/auth";
 
 const Login = () => {
-  const { signin } = useContext(AuthContext);
+  const { signin, googleSignin } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
+
+  const provider = new GoogleAuthProvider();
 
   const from = location.state?.from?.pathname || "/";
 
@@ -25,6 +27,15 @@ const Login = () => {
         console.log(user);
         form.reset();
         navigate(from, { replace: true });
+      })
+      .catch((error) => console.log(error));
+  };
+
+  const handleGoogleSignIn = () => {
+    googleSignin(provider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
       })
       .catch((error) => console.log(error));
   };
@@ -52,7 +63,9 @@ const Login = () => {
           <Button className="me-3" variant="primary" type="submit">
             Submit
           </Button>
-          <Button variant="outline-success">SignIn With Google</Button>{" "}
+          <Button onClick={handleGoogleSignIn} variant="outline-success">
+            SignIn With Google
+          </Button>{" "}
         </Form>
 
         <p>

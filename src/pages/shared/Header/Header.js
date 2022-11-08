@@ -47,7 +47,12 @@ const Header = () => {
                 </Link>
                 <Link className=" nav-menu">{user.email}</Link>
                 {user?.photoURL ? (
-                  <img src={user.photoURL} alt="" />
+                  <img
+                    className="rounded-circle me-2"
+                    style={{ height: "30px", width: "30px" }}
+                    src={user.photoURL}
+                    alt=""
+                  />
                 ) : (
                   <Link className=" nav-menu">
                     <FaUserAlt></FaUserAlt>
