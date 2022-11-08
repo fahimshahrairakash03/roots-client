@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider";
+import { GoogleAuthProvider } from "firebase/auth";
 
 const Login = () => {
   const { signin } = useContext(AuthContext);
@@ -48,6 +49,7 @@ const Login = () => {
           </Button>
           <Button variant="outline-success">SignIn With Google</Button>{" "}
         </Form>
+
         <p>
           Do not have an Account? <Link to="/signup"> Signup </Link>{" "}
         </p>
