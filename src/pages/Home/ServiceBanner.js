@@ -14,7 +14,7 @@ const ServiceBanner = () => {
 
   return (
     <div className="container my-3 p-5">
-      <h1 className="fw-bold mb-5">The services you can get</h1>
+      <h1 className="fw-bold mb-5 text-center">The services you can get</h1>
       <div className="d-sm-flex d-md-flex d-lg-flex  flex-sm-column flex-md-row flex-lg-row justify-content-sm-center justify-content-md-between justify-content-lg-between align-items-center">
         {services.map((service) => (
           <p key={service._id}>
@@ -34,7 +34,7 @@ const ServiceBanner = () => {
         ))}
       </div>
       <Link to="/services">
-        <Button className="my-2 fw-semibold" variant="secondary">
+        <Button className="  my-2 fw-semibold" variant="secondary">
           See All Services
         </Button>{" "}
       </Link>

@@ -8,7 +8,7 @@ const Services = () => {
 
   return (
     <div>
-      <h1 className="fw-bolder my-5">Explore all the Services</h1>
+      <h1 className="fw-bolder my-5 text-center">Explore all the Services</h1>
       <div className="container">
         <div className="row gy-3">
           {services.map((service) => (
