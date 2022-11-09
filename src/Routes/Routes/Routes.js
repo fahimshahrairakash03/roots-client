@@ -9,6 +9,7 @@ import ReviewForm from "../../pages/Review/ReviewForm";
 import AddService from "../../pages/Services/AddService";
 import ServiceDetails from "../../pages/Services/ServiceDetails";
 import Services from "../../pages/Services/Services";
+import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 
 export const router = createBrowserRouter([
   {

@@ -20,11 +20,15 @@ const Header = () => {
       variant="light"
     >
       <Container>
-        <img src={logo} width="40" height="40" />
+        <Link to="/">
+          {" "}
+          <img src={logo} width="40" height="40" />
+        </Link>
 
         <Navbar.Brand href="#home" className="fw-bold ms-2">
           Roots
         </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto ">
@@ -37,6 +41,7 @@ const Header = () => {
             <Link className=" nav-menu" to="/blog">
               Blog
             </Link>
+
             {user?.email ? (
               <>
                 <Link className=" nav-menu" to="/review">

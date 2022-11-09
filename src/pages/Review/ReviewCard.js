@@ -13,7 +13,6 @@ const ReviewCard = ({ review, handleDelete }) => {
 
   const { user } = useContext(AuthContext);
   const [updatedReview, setUpdatedReview] = useState(review);
-  console.log(updatedReview);
 
   const { _id, serviceName, Reviewer, message } = updatedReview;
 

@@ -38,6 +38,7 @@ const ReviewForm = () => {
         console.log(data);
         if (data.acknowledged) {
           alert("Review saved successfully");
+          form.reset();
         }
       })
       .catch((e) => console.log(e));

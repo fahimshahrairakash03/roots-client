@@ -39,8 +39,8 @@ const AddService = () => {
   };
 
   return (
-    <div>
-      <h1>Add the services</h1>
+    <div className="my-5">
+      <h1 className="text-center fw-bolder mb-5">Add a services</h1>
       <div className="w-50 mx-auto">
         <Form onSubmit={handleAddService}>
           <Form.Group className="mb-3" controlId="formBasicEmail">

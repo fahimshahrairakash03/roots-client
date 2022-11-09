@@ -5,7 +5,7 @@ import Table from "react-bootstrap/Table";
 const Blog = () => {
   return (
     <div className="my-5">
-      <h1 className="text-center fw-bolder">Blogs</h1>
+      <h1 className="text-center fw-bolder">Explore the Blogs</h1>
       <Accordion className="w-75 mx-auto my-5" defaultActiveKey="0">
         <Accordion.Item eventKey="0">
           <Accordion.Header>Difference between SQL and NoSQL</Accordion.Header>
