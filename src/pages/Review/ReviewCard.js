@@ -11,12 +11,12 @@ const ReviewCard = ({ review, handleDelete }) => {
           <div>
             {Reviewer}
             <div className="ms-auto">
-              <Button className="w-25" variant="outline-warning">
+              <Button className="w-25 fw-bold" variant="outline-warning">
                 Update
               </Button>{" "}
               <Button
                 onClick={() => handleDelete(_id)}
-                className="w-25"
+                className="w-25 fw-bold"
                 variant="outline-danger"
               >
                 Delete
