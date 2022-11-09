@@ -1,8 +1,10 @@
 import React from "react";
 import Accordion from "react-bootstrap/Accordion";
 import Table from "react-bootstrap/Table";
+import useTitle from "../../hooks/useTitle";
 
 const Blog = () => {
+  useTitle("blog");
   return (
     <div className="my-5">
       <h1 className="text-center fw-bolder">Explore the Blogs</h1>

@@ -4,8 +4,10 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider";
+import useTitle from "../../hooks/useTitle";
 
 const Signup = () => {
+  useTitle("signup");
   const { signup, user } = useContext(AuthContext);
 
   const handleSubmit = (e) => {

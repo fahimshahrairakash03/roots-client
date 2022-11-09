@@ -1,8 +1,10 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import useTitle from "../../hooks/useTitle";
 
 const AddService = () => {
+  useTitle("addService");
   const handleAddService = (e) => {
     e.preventDefault();
     const form = e.target;

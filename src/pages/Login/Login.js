@@ -5,8 +5,10 @@ import Form from "react-bootstrap/Form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider";
 import { GoogleAuthProvider } from "firebase/auth";
+import useTitle from "../../hooks/useTitle";
 
 const Login = () => {
+  useTitle("login");
   const { signin, googleSignin } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();

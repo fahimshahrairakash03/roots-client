@@ -5,8 +5,10 @@ import Card from "react-bootstrap/Card";
 import { AuthContext } from "../../context/AuthProvider";
 import ReviewForm from "../Review/ReviewForm";
 import ServiceReview from "../Review/ServiceReview";
+import useTitle from "../../hooks/useTitle";
 
 const ServiceDetails = () => {
+  useTitle("service_details");
   const { user } = useContext(AuthContext);
   const [reviews, setReviews] = useState([]);
   const service = useLoaderData();
