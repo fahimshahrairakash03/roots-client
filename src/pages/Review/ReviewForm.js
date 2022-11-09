@@ -13,6 +13,7 @@ const ReviewForm = () => {
   const handleReview = (e) => {
     e.preventDefault();
     const form = e.target;
+    const time = new Date();
     const name = form.name.value;
     const email = form.email.value;
     const message = form.review.value;
@@ -24,6 +25,7 @@ const ReviewForm = () => {
       Reviewer: name,
       email,
       message,
+      time: time,
     };
 
     fetch("https://roots-agency-server.vercel.app/reviews", {
@@ -52,7 +54,12 @@ const ReviewForm = () => {
       <Form onSubmit={handleReview} className="w-50 mx-auto">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Name</Form.Label>
-          <Form.Control type="text" name="name" placeholder="Enter Name" />
+          <Form.Control
+            type="text"
+            name="name"
+            placeholder="Enter Name"
+            required
+          />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -67,7 +74,12 @@ const ReviewForm = () => {
 
         <Form.Group className="mb-3 " controlId="formBasicPassword">
           <Form.Label>Review</Form.Label>
-          <Form.Control type="text" name="review" placeholder="Review" />
+          <Form.Control
+            type="text"
+            name="review"
+            placeholder="Review"
+            required
+          />
         </Form.Group>
 
         <Button variant="success" type="submit">

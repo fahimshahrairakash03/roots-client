@@ -4,16 +4,16 @@ import "./About.css";
 
 const About = () => {
   return (
-    <div className="container my-5">
-      <h1 className="fw-bolder text-center">About</h1>
+    <div className=" px-5 my-5">
+      <h1 className="fw-bolder text-center text-color">About</h1>
       <div className="row">
         <div className="col-lg-6 col-md-12 col-md-12">
           <img className="about-img" src={aboutimg} alt="" />
         </div>
         <div className="col-lg-6 col-md-12 col-md-12 ">
-          <div className="about-text">
-            <h3 className="text-center fw-bold">Story of Roots</h3>
-            <p>
+          <div className=" about-text">
+            <h3 className="text-center fw-bold text-color">Story of Roots</h3>
+            <p className="mt-4 text-color">
               ROOTS was established in 2007 with just one university partner and
               the vision to change the nature of education consultancy services
               provided in Bangladesh. Today ROOTS is a highly respected brand

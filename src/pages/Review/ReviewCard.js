@@ -14,7 +14,7 @@ const ReviewCard = ({ review, handleDelete }) => {
   const { user } = useContext(AuthContext);
   const [updatedReview, setUpdatedReview] = useState(review);
 
-  const { _id, serviceName, Reviewer, message } = updatedReview;
+  const { _id, serviceName, Reviewer, message, time } = updatedReview;
 
   const handleUpdateReview = (e) => {
     e.preventDefault();
@@ -146,6 +146,9 @@ const ReviewCard = ({ review, handleDelete }) => {
           <Card.Title>{message}</Card.Title>
           <Card.Text>{serviceName}</Card.Text>
         </Card.Body>
+        <span className="ms-2">
+          <little>{time}</little>
+        </span>
       </Card>
     </div>
   );

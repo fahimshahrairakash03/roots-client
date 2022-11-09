@@ -15,6 +15,7 @@ const ServiceDetails = () => {
   console.log(service);
   const { description, _id, img, price, title } = service;
 
+  //const url = `https://roots-agency-server.vercel.app/reviews?service=${title}`;
   const url = `https://roots-agency-server.vercel.app/reviews?service=${title}`;
 
   useEffect(() => {

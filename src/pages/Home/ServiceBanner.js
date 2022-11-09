@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { PhotoProvider, PhotoView } from "react-photo-view";
+import "../shared/Information/Information.css";
 
 const ServiceBanner = () => {
   const [services, setServices] = useState([]);
@@ -14,8 +15,10 @@ const ServiceBanner = () => {
   }, []);
 
   return (
-    <div className="container my-3 p-5">
-      <h1 className="fw-bold mb-5 text-center">The services you can get</h1>
+    <div className=" information my-3 p-5">
+      <h1 className="fw-bold mb-5 text-center text-color">
+        The services you can get
+      </h1>
       <div className="d-sm-flex d-md-flex d-lg-flex  flex-sm-column flex-md-row flex-lg-row justify-content-sm-center justify-content-md-between justify-content-lg-between align-items-center">
         {services.map((service) => (
           <p key={service._id}>
@@ -43,7 +46,7 @@ const ServiceBanner = () => {
         ))}
       </div>
       <Link to="/services">
-        <Button className="  my-2 fw-semibold" variant="secondary">
+        <Button className=" service-btn  my-2 fw-bold" variant="secondary">
           See All Services
         </Button>{" "}
       </Link>
