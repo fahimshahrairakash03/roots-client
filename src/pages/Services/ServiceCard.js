@@ -16,6 +16,7 @@ const ServiceCard = ({ service }) => {
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>{description.slice(0, 100)}. . .</Card.Text>
+          <Card.Text className="fw-semibold">Price: ${price}</Card.Text>
           <Link to={`/services/${_id}`}>
             <Button variant="primary">Details</Button>
           </Link>

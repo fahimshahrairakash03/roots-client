@@ -1,9 +1,8 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
 const ServiceReview = ({ review }) => {
-  const { serviceName, Reviewer, message } = review;
+  const { _id, serviceName, Reviewer, message } = review;
   return (
     <div className="mb-3">
       <Card>
