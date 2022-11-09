@@ -26,7 +26,7 @@ const ReviewForm = () => {
       message,
     };
 
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://roots-agency-server.vercel.app/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",

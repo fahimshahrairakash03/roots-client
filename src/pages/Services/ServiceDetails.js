@@ -13,7 +13,7 @@ const ServiceDetails = () => {
   console.log(service);
   const { description, _id, img, price, title } = service;
 
-  const url = `http://localhost:5000/reviews?service=${title}`;
+  const url = `https://roots-agency-server.vercel.app/reviews?service=${title}`;
 
   useEffect(() => {
     fetch(url).then((res) =>

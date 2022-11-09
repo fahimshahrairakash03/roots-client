@@ -6,7 +6,7 @@ const Review = () => {
   const { user } = useContext(AuthContext);
   const [reviews, setReview] = useState([]);
 
-  const url = `http://localhost:5000/reviews?email=${user?.email}`;
+  const url = `https://roots-agency-server.vercel.app/reviews?email=${user?.email}`;
 
   useEffect(() => {
     fetch(url)
@@ -17,7 +17,7 @@ const Review = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you want to Delete the review?");
     if (proceed) {
-      fetch(`http://localhost:5000/reviews/${id}`, {
+      fetch(`https://roots-agency-server.vercel.app/reviews/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

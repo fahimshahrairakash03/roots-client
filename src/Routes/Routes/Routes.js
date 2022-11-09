@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
       {
         path: "/services",
         element: <Services></Services>,
-        loader: () => fetch("http://localhost:5000/services"),
+        loader: () => fetch("https://roots-agency-server.vercel.app/services"),
       },
       {
         path: "/blog",
@@ -41,13 +41,13 @@ export const router = createBrowserRouter([
         path: "/services/:id",
         element: <ServiceDetails></ServiceDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/services/${params.id}`),
+          fetch(`https://roots-agency-server.vercel.app/services/${params.id}`),
       },
       {
         path: "/reviewform",
         element: <ReviewForm></ReviewForm>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/services/${params.id}`),
+          fetch(`https://roots-agency-server.vercel.app/services/${params.id}`),
       },
       {
         path: "/review",

@@ -18,7 +18,7 @@ const ReviewCard = ({ review, handleDelete }) => {
 
   const handleUpdateReview = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:5000/reviews/${_id}`, {
+    fetch(`https://roots-agency-server.vercel.app/reviews/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
