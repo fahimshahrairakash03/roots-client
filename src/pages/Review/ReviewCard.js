@@ -17,7 +17,7 @@ const ReviewCard = ({ review, handleDelete }) => {
 
   const { _id, serviceName, Reviewer, message } = updatedReview;
 
-  const handleUpdateuser = (e) => {
+  const handleUpdateReview = (e) => {
     e.preventDefault();
     fetch(`http://localhost:5000/reviews/${_id}`, {
       method: "PUT",
@@ -27,7 +27,12 @@ const ReviewCard = ({ review, handleDelete }) => {
       body: JSON.stringify(updatedReview),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount > 0) {
+          alert("Review Updated");
+        }
+      });
   };
 
   const handleInputChange = (e) => {
@@ -74,7 +79,7 @@ const ReviewCard = ({ review, handleDelete }) => {
                     </Modal.Header>
                     <Modal.Body>
                       <Form
-                        onSubmit={handleUpdateuser}
+                        onSubmit={handleUpdateReview}
                         className="w-50 mx-auto"
                       >
                         <Form.Group className="mb-3" controlId="formBasicEmail">
