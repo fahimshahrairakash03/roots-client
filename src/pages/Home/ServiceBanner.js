@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+import { PhotoProvider, PhotoView } from "react-photo-view";
 
 const ServiceBanner = () => {
   const [services, setServices] = useState([]);
@@ -18,16 +19,24 @@ const ServiceBanner = () => {
       <div className="d-sm-flex d-md-flex d-lg-flex  flex-sm-column flex-md-row flex-lg-row justify-content-sm-center justify-content-md-between justify-content-lg-between align-items-center">
         {services.map((service) => (
           <p key={service._id}>
-            <Card style={{ width: "18rem", height: "25rem" }}>
-              <Card.Img
-                style={{ height: "200px", borderRadius: "20px" }}
-                variant="top"
-                src={service.img}
-              />
+            <Card style={{ width: "18rem", height: "27rem" }}>
+              <PhotoProvider>
+                <div className="foo">
+                  <PhotoView src={service.img}>
+                    <img src={service.img} alt="" />
+                  </PhotoView>
+                </div>
+              </PhotoProvider>
+
               <Card.Body>
                 <Card.Title>{service.title}</Card.Title>
                 <Card.Text>{service.description.slice(0, 100)}. . .</Card.Text>
-                <Button variant="primary">Details</Button>
+                <Card.Text className="fw-semibold">
+                  Price: ${service.price}
+                </Card.Text>
+                <Link to={`/services/${service._id}`}>
+                  <Button variant="primary">Details</Button>
+                </Link>
               </Card.Body>
             </Card>
           </p>

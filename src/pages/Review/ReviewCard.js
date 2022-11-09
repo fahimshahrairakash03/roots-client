@@ -59,9 +59,6 @@ const ReviewCard = ({ review, handleDelete }) => {
               <FaUserAlt></FaUserAlt>
             )}
             <div className="ms-auto mt-2">
-              {/* <Button className="w-25 fw-bold" variant="outline-warning">
-                Update
-              </Button>{" "} */}
               <>
                 <>
                   <Button
