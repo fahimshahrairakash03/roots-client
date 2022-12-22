@@ -1,0 +1,14 @@
+.serviceBannerbtn {
+  margin-left: 40%;
+}
+
+@media screen and (max-width: 800px) {
+  .serviceBannerbtn {
+    margin-left: 35%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .serviceBannerbtn {
+    margin-left: 25%;
+  }
+}

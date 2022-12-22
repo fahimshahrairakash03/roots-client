@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "../shared/Information/Information.css";
+import "./ServiceBanner.css";
 
 const ServiceBanner = () => {
   const [services, setServices] = useState([]);
@@ -46,7 +47,10 @@ const ServiceBanner = () => {
         ))}
       </div>
       <Link to="/services">
-        <Button className=" service-btn  my-2 fw-bold" variant="secondary">
+        <Button
+          className=" serviceBannerbtn service-btn  my-4  fw-bold"
+          variant="secondary"
+        >
           See All Services
         </Button>{" "}
       </Link>

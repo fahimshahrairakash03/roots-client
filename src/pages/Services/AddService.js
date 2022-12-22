@@ -2,6 +2,8 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import useTitle from "../../hooks/useTitle";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AddService = () => {
   useTitle("addService");
@@ -34,7 +36,9 @@ const AddService = () => {
       .then((data) => {
         console.log(data);
         if (data.acknowledged) {
+          toast.success("Wow so easy!");
           alert("service added successfully");
+
           form.reset();
         }
       });

@@ -6,6 +6,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider";
 import { GoogleAuthProvider } from "firebase/auth";
 import useTitle from "../../hooks/useTitle";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   useTitle("login");
@@ -27,6 +29,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        toast.success("Wow so easy!");
         form.reset();
         navigate(from, { replace: true });
       })

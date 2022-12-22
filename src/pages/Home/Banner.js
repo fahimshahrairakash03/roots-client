@@ -7,7 +7,7 @@ import "./Banner.css";
 
 const Banner = () => {
   return (
-    <Carousel className="px-2">
+    <Carousel className="px-2 container">
       <Carousel.Item interval={1000}>
         <div className="carousel-img">
           <img className="d-block w-100" src={img1} alt="First slide" />
