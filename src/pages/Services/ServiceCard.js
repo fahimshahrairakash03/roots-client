@@ -18,7 +18,11 @@ const ServiceCard = ({ service }) => {
           <div className="foo">
             <PhotoView src={service.img}>
               <img
-                style={{ height: "200px", borderRadius: "20px" }}
+                style={{
+                  height: "200px",
+                  width: "200px",
+                  borderRadius: "20px",
+                }}
                 src={service.img}
                 alt=""
               />

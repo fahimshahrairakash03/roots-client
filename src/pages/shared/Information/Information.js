@@ -8,7 +8,7 @@ const Information = () => {
     <div className=" information p-5">
       <div className="text-center info-heading row ">
         <div className="col-md-12 col-lg-6">
-          <h1 className="mb-3">Why Choose Roots?</h1>
+          <h1 className="mb-3 info-text">Why Choose Roots?</h1>
         </div>
         <div className="col-md-12 col-lg-6">
           <h5 className=" fw-normal text-md-center text-lg-start ">

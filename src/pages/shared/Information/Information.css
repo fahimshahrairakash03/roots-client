@@ -9,3 +9,11 @@
 .text-color {
   color: #002147;
 }
+.info-text {
+  border-right: 2px solid rgb(221, 217, 217);
+}
+@media screen and (max-width: 800px) {
+  .info-text {
+    border-right: none;
+  }
+}
